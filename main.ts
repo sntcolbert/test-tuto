@@ -1,2 +1,2 @@
+let joueur1 = 0
 let joueur2 = 4
-radio.setGroup(1)
