@@ -90,7 +90,17 @@ radio.onReceivedNumber(function (receivedNumber) {
         basic.showIcon(IconNames.Asleep)
     }
 ```
+## Step 8
 
+Continuer le programme comme ci-dessous pour afficher des icônes en fonction des résultat (perdu ou gagné).
+
+
+```blocks
+radio.onReceivedNumber(function (receivedNumber) {
+    joueur1 = receivedNumber
+    if (joueur1 == joueur2) {
+        basic.showIcon(IconNames.Asleep)
+    }
     if (joueur1 == 1) {
         if (joueur2 == 2) {
             basic.showIcon(IconNames.Sad)
