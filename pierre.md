@@ -74,15 +74,23 @@ input.onButtonPressed(Button.AB, function () {
     radio.sendNumber(joueur2)
     ```
 ## Step 6
- Si vous voulez pour gagner du temps et vous éviter de rentrer le code ci-dessous vous pouvez faire un copier coller de cette partie à partir du programme précédent.
- Pour cela il vous faut l'ouvrir dans une autre fenêtre.
- 
+ Sélectionne l'événement ``||input:lorsqu'une donnée reçu par radio||`` , ajoute ``||variables:définir joueur1 reçu numéro||``
+
+```blocks
+radio.onReceivedNumber(function (receivedNumber) {
+    joueur1 = receivedNumber
+```
+
+## Step 7
+Placer un bloc ``||logic:si alors||`` et tester l'égalité ``||logic:=||`` entre ``||variables:joueur1||`` et ``||variables:joueur2||``, placer un bloc ``||basic: icône sleep||``
 ```blocks
 radio.onReceivedNumber(function (receivedNumber) {
     joueur1 = receivedNumber
     if (joueur1 == joueur2) {
         basic.showIcon(IconNames.Asleep)
     }
+```
+
     if (joueur1 == 1) {
         if (joueur2 == 2) {
             basic.showIcon(IconNames.Sad)
