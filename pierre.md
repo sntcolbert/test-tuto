@@ -3,7 +3,7 @@
 ## Step 1 
  
 Bienvenue! Créer deux variables, ``||variables:joueur1||`` et  ``||variables:joueur2||``.
-Placer le bloc ``||variables:définir joueur1 à 0||`` et le bloc ``||variables:définir joueur2 à 4||`` dans l'événement ``||basic:au démarrage||``.
+Dans l'événement ``||basic:au Démarrage||`` Placer le bloc ``||variables:définir joueur1 à 0||`` et le bloc ``||variables:définir joueur2 à 4||``.
 
 ```blocks
 let joueur1 = 0
