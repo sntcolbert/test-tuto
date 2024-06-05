@@ -73,3 +73,44 @@ input.onButtonPressed(Button.AB, function () {
     basic.pause(1000)
     radio.sendNumber(joueur2)
     ```
+## Step 6
+ Si vous voulez pour gagner du temps et vous éviter de rentrer le code ci-dessous vous pouvez faire un copier coller de cette partie à partir du programme précédent.
+ Pour cela il vous faut l'ouvrir dans une autre fenêtre.
+ 
+```blocks
+radio.onReceivedNumber(function (receivedNumber) {
+    joueur1 = receivedNumber
+    if (joueur1 == joueur2) {
+        basic.showIcon(IconNames.Asleep)
+    }
+    if (joueur1 == 1) {
+        if (joueur2 == 2) {
+            basic.showIcon(IconNames.Sad)
+        } else {
+            if (joueur2 == 3) {
+                basic.showIcon(IconNames.Happy)
+            }
+        }
+    }
+    if (joueur1 == 2) {
+        if (joueur2 == 1) {
+            basic.showIcon(IconNames.Happy)
+        } else {
+            if (joueur2 == 3) {
+                basic.showIcon(IconNames.Sad)
+            }
+        }
+    }
+    if (joueur1 == 3) {
+        if (joueur2 == 1) {
+            basic.showIcon(IconNames.Sad)
+        } else {
+            if (joueur2 == 2) {
+                basic.showIcon(IconNames.Happy)
+            }
+        }
+    }
+    basic.pause(1000)
+    })
+    ```
+
