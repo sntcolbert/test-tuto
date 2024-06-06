@@ -12,7 +12,7 @@ let joueur2 = 4
 
 ## Etape 2 
  
-Définir le groupe ``||radio||`` et placer le bloc dans l'événement ``||basic:au démarrage||``.
+Définir le groupe ``||radio||`` et placer le bloc dans l'événement ``||basic:au Démarrage||``.
  
 ```blocks
 let joueur1 = 0
@@ -40,7 +40,7 @@ input.onButtonPressed(Button.A, function () {
 ```
 
 ## Etape 4
-Sélectionne l'événement ``||input:lorsque le bouton «B» est pressé||`` ajoute le bloc : ``||variables: définir joueur2 à 2 ||`` , ajoute le bloc ``|| basic: montrer feuille||`` , ajoute le bloc ``||basic: pause||``
+Sélectionne l'événement ``||input:lorsque le bouton «B» est pressé||`` ajoute le bloc : ``||variables: définir joueur2 à 2 ||`` , ajoute le bloc ``|| basic: montrer pierre||`` , ajoute le bloc ``||basic: pause||``
 ajoute également ``||radio: envoyer nombre par radio||``.
 ```blocks
 input.onButtonPressed(Button.B, function () {
@@ -58,7 +58,7 @@ input.onButtonPressed(Button.B, function () {
 ```
 
 ## Etape 5
-Sélectionne l'événement ``||input:lorsque les boutons «A» et «B» sont pressés||`` ajoute le bloc : ``||variables: définir joueur2 à 3 ||`` , ajoute le bloc ``|| basic: montrer feuille||`` , ajoute le bloc ``||basic: pause||``
+Sélectionne l'événement ``||input:lorsque les boutons «A» et «B» sont pressés||`` ajoute le bloc : ``||variables: définir joueur2 à 3 ||`` , ajoute le bloc ``|| basic: montrer ciseaux||`` , ajoute le bloc ``||basic: pause||``
 ajoute également ``||radio: envoyer nombre par radio||``.
 ```blocks
 input.onButtonPressed(Button.AB, function () {
