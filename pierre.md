@@ -92,10 +92,10 @@ radio.onReceivedNumber(function (receivedNumber) {
 ```
 ## Etape 8
 
-Placer un bloc ``||logic:si alors||`` et tester si le joueur1 = 1. 
-Placer un bloc ``||logic:si sinon||``  et tester si le joueur2 = 2. 
+Placer un bloc ``||logic:si alors||`` et tester si le joueur1 ``||logic:=||`` 1. 
+Placer un bloc ``||logic:si sinon||``  et tester si le joueur2 ``||logic:=||`` 2. 
 Placer un bloc ``||basic: icône triste||``.
-Placer dans la partie ``||logic:sinon||`` un bloc ``||logic:si alors||`` et tester si le joueur2 = 3.
+Placer dans la partie ``||logic:sinon||`` un bloc ``||logic:si alors||`` et tester si le joueur2 ``||logic:=||`` 3.
 Placer un bloc ``||basic: icône heureux||`` 
 
 
@@ -117,8 +117,86 @@ radio.onReceivedNumber(function (receivedNumber) {
 ```
 ## Etape 9
 
-Continuer de la même façon pour terminer le programme 
+Placer un bloc ``||logic:si alors||`` et tester si le joueur1 ``||logic:=||`` 2. 
+Placer un bloc ``||logic:si sinon||``  et tester si le joueur2 ``||logic:=||`` 1. 
+Placer un bloc ``||basic: icône heureux||``.
+Placer dans la partie ``||logic:sinon||`` un bloc ``||logic:si alors||`` et tester si le joueur2 ``||logic:=||`` 3.
+Placer un bloc ``||basic: icône triste||`` 
+
 ```blocks
+    radio.onReceivedNumber(function (receivedNumber) {
+    joueur1 = receivedNumber
+    if (joueur1 == joueur2) {
+        basic.showIcon(IconNames.Asleep)
+    }
+    if (joueur1 == 1) {
+        if (joueur2 == 2) {
+            basic.showIcon(IconNames.Sad)
+        } else {
+            if (joueur2 == 3) {
+                basic.showIcon(IconNames.Happy)
+            }
+        }
+    }
+    if (joueur1 == 2) {
+        if (joueur2 == 1) {
+            basic.showIcon(IconNames.Happy)
+        } else {
+            if (joueur2 == 3) {
+                basic.showIcon(IconNames.Sad)
+            }
+        }
+    }
+```
+
+## Etape 10
+Placer un bloc ``||logic:si alors||`` et tester si le joueur1 ``||logic:=||`` 3. 
+Placer un bloc ``||logic:si sinon||``  et tester si le joueur2 ``||logic:=||`` 1. 
+Placer un bloc ``||basic: icône triste||``.
+Placer dans la partie ``||logic:sinon||`` un bloc ``||logic:si alors||`` et tester si le joueur2 ``||logic:=||`` 2.
+Placer un bloc ``||basic: icône heureux||``
+
+```blocks
+   
+    radio.onReceivedNumber(function (receivedNumber) {
+    joueur1 = receivedNumber
+    if (joueur1 == joueur2) {
+        basic.showIcon(IconNames.Asleep)
+    }
+    if (joueur1 == 1) {
+        if (joueur2 == 2) {
+            basic.showIcon(IconNames.Sad)
+        } else {
+            if (joueur2 == 3) {
+                basic.showIcon(IconNames.Happy)
+            }
+        }
+    }
+    if (joueur1 == 2) {
+        if (joueur2 == 1) {
+            basic.showIcon(IconNames.Happy)
+        } else {
+            if (joueur2 == 3) {
+                basic.showIcon(IconNames.Sad)
+            }
+        }
+    }
+    if (joueur1 == 3) {
+        if (joueur2 == 1) {
+            basic.showIcon(IconNames.Sad)
+        } else {
+            if (joueur2 == 2) {
+                basic.showIcon(IconNames.Happy)
+            }
+        }
+    }
+ 
+```
+## Etape 11
+Placer l'événement ``||basic:pause 1s||``
+
+```blocks
+   
     radio.onReceivedNumber(function (receivedNumber) {
     joueur1 = receivedNumber
     if (joueur1 == joueur2) {
@@ -154,5 +232,6 @@ Continuer de la même façon pour terminer le programme
     basic.pause(1000)
     })
 ```
+
 ## Félicitations !
 #### vous avez terminer, vous pouvez maintenant jouer.
